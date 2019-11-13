@@ -1,0 +1,18 @@
+Easter eggs:
+1. en function "writeToTemp_":
+-- "¡que curioso! en la defensa cada miembro del grupo deberá decir un trabalenguas diferente por un premio muy especial"
+Char comienza en:
+0x00402e40
+Finaliza en:
+0x00403020
+NOT decoded
+
+2. en seccion ".data":
+-- "¡que curioso! en la defensa el grupo deberá interpretar un fragmento de algun dialogo de Les Luthiers por un premio especial"
+Char comienza en:
+0x00614588
+Plain text
+
+??3. en funcion "main":
+-- "valgrind_manda() --> solo_di() --> secreto() --> esto_es_un()"
+Nombre de funciones?

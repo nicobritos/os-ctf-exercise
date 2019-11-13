@@ -1,0 +1,21 @@
+Bienvenidos al TP3 y felicitaciones, ya resolvieron el primer acertijo.
+
+En este TP deberán finalizar el juego que ya comenzaron resolviendo los desafíos de cada nivel.
+Además tendrán que investigar otras preguntas para responder durante la defensa.
+El desafío final consiste en crear un servidor que se comporte igual que yo, es decir, que provea los mismos desafíos y que sea necesario hacer lo mismo para resolverlos. No basta con esperar la respuesta
+Además deberán implementar el cliente para comunicarse con este servidor.
+
+Deberán estar atentos a los desafíos ocultos.
+
+Para verificar que sus respuestas tienen el formato correcto respondan a este desafío con "entendido\n"
+# \033[D \033[A \033[A \033[D \033[B \033[C \033[B \033[D *
+https://vocaroo.com/i/s1lD9m8lGzei
+EBADF... abrilo y verás o redirijilo ;)
+respuesta = strings[250]
+.data .bss .comment ? .shstrtab .symtab .strtab
+mixed fds
+Portrait
+Tango Hotel India Sierra India Sierra Alfa Whiskey Echo Sierra Oscar Mike Echo
+quine
+b gdbme y encontrá el valor mágico
+Felicitaciones, finalizaron el juego. Ahora deberán implementar el servidor que se comporte como el servidor provisto

@@ -1,0 +1,1 @@
+¡Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:
