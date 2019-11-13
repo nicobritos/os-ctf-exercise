@@ -41,8 +41,9 @@ int main(int argc, char *argv[]) {
 		printf("Child\n");
 		while (1) {
 		// while (CONECTADO)
-			if (read(fd, buffer, BUFFER_SIZE - 1)); 
-				printf("\"%s\"\n", buffer); 
+			if (read(fd, buffer, BUFFER_SIZE - 1)) {
+				printf("Received: \"%s\"\n", buffer); 
+			}
 		}
 	} else if (readingPid > 0) {
 		// Parent
