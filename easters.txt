@@ -16,3 +16,7 @@ Plain text
 ??3. en funcion "main":
 -- "valgrind_manda() --> solo_di() --> secreto() --> esto_es_un()"
 Nombre de funciones?
+
+??4. make segfault?:
+-- "makeSegFault()"
+Nombre de funciones?
