@@ -1,4 +1,6 @@
+from __future__ import print_function
 import os
+import sys
 
 # archivo a cargar tiene que contener pares de numeros en hexa (byte) y deben ser multiplo de 4 (leemos int)
 
@@ -6,8 +8,12 @@ DIVISOR = 0x56B
 
 
 def read_input():
+    s = 'Write filepath (can be relative) to decode or nothing to exit\nFilepath: '
     try:
-        return input('Write filepath (can be relative) to decode or nothing to exit\nFilepath: ')
+        if (sys.version_info > (3, 0)):
+            return input(s)
+        else:
+            return raw_input(s)
     except SyntaxError:
         return ''
 
@@ -48,8 +54,9 @@ def parse_file(infile, outfile):
 
 
 def main():
+    print('Python version: ' + str(sys.version_info[0]) + '.' + str(sys.version_info[1]))
     input_str = read_input()
-    while input_str is not '':
+    while input_str != '':
         try:
             with open(input_str, 'r') as infile:
                 output_str = os.path.basename(input_str) + '.dec.txt'
