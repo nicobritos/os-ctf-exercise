@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stringhelper.h": "c",
+        "string.h": "c",
+        "challengeshandler.h": "c"
+    }
+}
