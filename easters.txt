@@ -1,11 +1,7 @@
 Easter eggs:
 1. en function "writeToTemp_":
 -- "¡que curioso! en la defensa cada miembro del grupo deberá decir un trabalenguas diferente por un premio muy especial"
-Char comienza en:
-0x00402e40
-Finaliza en:
-0x00403020
-NOT decoded
+Después de ganar el juego, hacer "cat /tmp/asdf"
 
 2. en seccion ".data":
 -- "¡que curioso! en la defensa el grupo deberá interpretar un fragmento de algun dialogo de Les Luthiers por un premio especial"
@@ -14,13 +10,14 @@ Char comienza en:
 Plain text
 
 3. en funcion "main":
+si se hace "valgrind ./server"
 -- "valgrind_manda() --> solo_di() --> secreto() --> esto_es_un()"
-Nombre de funciones?
+Nombre de funciones que no hacen nada en main antes de conectar el client
 
-4. en desafio de codigo morse:
--- "CONNECTING PEOPLE"
+??4. en desafio de codigo morse:
+-- "CONNECTING PEOPLE" (pareceria no ser nada)
 Decodificacion del codigo
 
 ??5. make segfault?:
 -- "makeSegFault()"
-Nombre de funciones?
+Nombre de funciones que no hacen nada en main antes de conectar el client
