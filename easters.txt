@@ -18,6 +18,4 @@ Nombre de funciones que no hacen nada en main antes de conectar el client
 -- "CONNECTING PEOPLE" (pareceria no ser nada)
 Decodificacion del codigo
 
-??5. make segfault?:
--- "makeSegFault()"
-Nombre de funciones que no hacen nada en main antes de conectar el client
+668d4e3b93fcd2aebf729c62e115f743
