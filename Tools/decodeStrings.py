@@ -20,7 +20,7 @@ def read_input():
 
 # Doesn't save NULL
 def parse_file(infile, outfile):
-    hex_iterator = (int(c, 16) for c in infile.read())
+    hex_iterator = (int(c, 16) for c in infile.read() if (ord('0') <= ord(c) <= ord('9')) or (ord('a') <= ord(c.lower()) <= ord('f')))
 
     try:
         while True:
