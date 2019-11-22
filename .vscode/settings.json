@@ -2,6 +2,8 @@
     "files.associations": {
         "stringhelper.h": "c",
         "string.h": "c",
-        "challengeshandler.h": "c"
+        "challengeshandler.h": "c",
+        "clientconnection.h": "c",
+        "stdint.h": "c"
     }
 }
