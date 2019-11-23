@@ -1,3 +1,11 @@
 
 Ghidra/Server/server.rep/projectState
 *.dat
+Ghidra/Server.gpr
+Ghidra/Server.rep/idata/00/00000000.prp
+Ghidra/Server.rep/idata/00/~00000000.db/db.4.gbf
+Ghidra/Server.rep/idata/~index.bak
+Ghidra/Server.rep/project.prp
+Ghidra/Server.rep/projectState
+Ghidra/Server.rep/versioned/~index.bak
+TP/.vscode/settings.json

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define HASH_COMMAND_LENGTH 44
+#define HASH_COMMAND_LENGTH 80
 
 typedef struct t_challengeCDT {
     const char *description;
@@ -25,7 +25,7 @@ static const t_challengeCDT challenges[CHALLENGES_LENGTH] = {
         "eb112daf85b0e0fd7c662a23e53cd7b3"
     },
     {
-        "# \033[D \033[A \033[A \033[D \033[B \033[C \033[B \033[D *",
+        "# \\033[D \\033[A \\033[A \\033[D \\033[B \\033[C \\033[B \\033[D *",
         "¿Qué diferencias hay entre TCP y UDP y en qué casos conviene usar cada uno?",
         "5758b4bf840c5ace20d99eb532c71df7"
     },
@@ -83,7 +83,7 @@ static const t_challengeCDT challenges[CHALLENGES_LENGTH] = {
 
 
 t_challengeADT getChallenge(uint8_t challenge) {
-    if (challenge == NULL) return NULL;
+    if (challenge > CHALLENGES_LENGTH) return NULL;
     return challenges + challenge;
 }
 
@@ -116,5 +116,6 @@ void hash(char *out, char *in) {
   }
 
   fgets(out, HASH_COMMAND_LENGTH, popenFile);
+  out[32] = 0;
   return;
 }
