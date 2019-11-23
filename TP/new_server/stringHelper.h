@@ -1,5 +1,6 @@
 #ifndef _STRING_HELPER_H
 #define _STRING_HELPER_H
+#include <stdint.h>
 
 #define RESEARCH_QUESTIONS_LENGTH (MENUS_LENGTH - 1)
 #define HASHES_LENGTH MENUS_LENGTH
