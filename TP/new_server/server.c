@@ -22,9 +22,7 @@ int main() {
     printf("------------- DESAFIO -------------\n");
     t_challengeADT challenge = getChallenge(challengeIndex);
     printf("%s\n", getChallengeDescription(challenge));
-    //if (funciones[(long)challenge] != (void *)0x0) {
-    //   (*(code *)funciones[(long)challenge])();
-    // }
+    getChallengeFunction(challenge);
     puts("\n----- PREGUNTA PARA INVESTIGAR -----");
     printf("%s\n",getChallengeResearchQuestion(challenge));
     receive(clientFD, stringBuffer, STRING_BUFFER);  

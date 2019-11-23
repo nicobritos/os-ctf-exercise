@@ -16,6 +16,8 @@ const char *getChallengeDescription(t_challengeADT challenge);
 
 const char *getChallengeResearchQuestion(t_challengeADT challenge);
 
+void getChallengeFunction(t_challengeADT challenge);
+
 uint8_t isValidAnswer(t_challengeADT challenge, const char *answer);
 
 #endif
