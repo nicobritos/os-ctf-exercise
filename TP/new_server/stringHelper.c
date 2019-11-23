@@ -1,5 +1,6 @@
 #include "stringHelper.h"
 #include <stdio.h>
+#include <stdint.h>
 
 #define HASH_COMMAND_LENGTH 40
 
@@ -50,7 +51,7 @@ static const char *hashes[HASHES_LENGTH] = {
     "97948f7a5ff8b7ff45ed8a9388f1b396",
     "062bca7bb736a217a853f7a6ad9821aa",
     "469ce529bbe8586e554e11a297a83241"
-}
+};
 
 const char *getChallenge(uint8_t challenge) {
     if (challenge >= MENUS_LENGTH) return NULL;
