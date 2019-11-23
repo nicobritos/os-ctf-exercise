@@ -11,7 +11,6 @@
 #define ERROR_CONNECT 2
 #define ERROR_FORK 2
 
-#define LOCALHOST "0.0.0.0"
 #define BUFFER_SIZE 1024
 #define PORT 23423
 
@@ -33,31 +32,20 @@ int main(int argc, char *argv[]) {
 		perror("Error connecting"); 
 		return ERROR_CONNECT;
 	}
-
 	readingPid = fork();
 	if (readingPid == 0) {
-		// Child
-
-		printf("Child\n");
 		while (1) {
-		// while (CONECTADO)
 			if (read(fd, buffer, BUFFER_SIZE - 1)) {
 				printf("Received: \"%s\"\n", buffer); 
 			}
 		}
 	} else if (readingPid > 0) {
-		// Parent
-
-		printf("Parent\n");
 		while (1) {
-		// while (CONECTADO)
 			if (fgets(buffer, BUFFER_SIZE - 1, stdin)) {
-				// buffer[strcspn(buffer, "\n")] = '\0';
 				send(fd, buffer, strlen(buffer), 0); 
 			}
 		}
 	} else {
-		// Error
 		printf("Error\n");
 		returnValue = ERROR_FORK;
 	}

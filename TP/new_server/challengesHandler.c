@@ -7,16 +7,6 @@
 
 #define TRUE 1
 
-typedef unsigned long    undefined8;
-typedef unsigned int    undefined4;
-typedef unsigned int    uint;
-typedef unsigned long    ulong;
-typedef unsigned char    byte;
-
-
-
-
-
 #define HASH_COMMAND_LENGTH 80
 
 typedef struct t_challengeCDT {
@@ -66,7 +56,7 @@ static t_challengeCDT challenges[CHALLENGES_LENGTH] = {
         ebadf
     },
     {
-        "respuesta = strings[217]",
+        "respuesta = strings[214]",
         "¿Cómo garantiza TCP que los paquetes llegan en orden y no se pierden?",
         "4df7184afd235967b93670386783701d",
         NULL
@@ -137,7 +127,7 @@ void getChallengeFunction(t_challengeADT challenge){
     }
 }
 
-uint8_t isValidAnswer(t_challengeADT challenge, const char *answer) {
+int isValidAnswer(t_challengeADT challenge, const char *answer) {
     if (challenge == NULL) return 0;
     char buffer[HASH_COMMAND_LENGTH];
     hash(buffer, answer);
@@ -194,13 +184,13 @@ void quine(void){
     if (gccReturnValue == 0) {
         char * entryMessage = "¡Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:\n";
         printf("%s",entryMessage);
-        uint diff = system("./quine | diff - quine.c");
+        unsigned int diff = system("./quine | diff - quine.c");
         if (diff == 0) {
             char * answer = "¡Genial! la respuesta a este acertijo es abalastro\n";
             printf("%s",answer);
         }
         else {
-            printf("diff returned: %lu\n",(ulong)diff);
+            printf("diff returned: %lu\n",(unsigned long)diff);
         }
     }
 }
