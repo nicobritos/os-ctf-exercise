@@ -1,6 +1,21 @@
 #include "challengesHandler.h"
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+#define TRUE 1
+
+typedef unsigned long    undefined8;
+typedef unsigned int    undefined4;
+typedef unsigned int    uint;
+typedef unsigned long    ulong;
+typedef unsigned char    byte;
+
+
+
+
 
 #define HASH_COMMAND_LENGTH 80
 
@@ -141,5 +156,78 @@ void hash(char *out, char *in) {
 
   fgets(out, HASH_COMMAND_LENGTH, popenFile);
   out[32] = 0;
+  return;
+}
+
+void pipeRedir(){
+  char *answer;
+  
+  answer = "la respuesta es pistolero";
+  write(5,answer,strlen(answer));
+  return;
+}
+
+void printPortrait(void)
+
+{
+  printf(
+        "                                  _______                                                                 _,,ad8888888888bba,_                                                        ,ad88888I888888888888888ba,                                                  ,88888888I88888888888888888888a,                                             ,d888888888I8888888888888888888888b,                                          d88888PP\"\"\"\" \"\"YY88888888888888888888b,                                      ,d88\"\'__,,--------,,,,.;ZZZY8888888888888,                                    ,8IIl\'\"                ;;l\"ZZZIII8888888888,                                  ,I88l;\'                  ;lZZZZZ888III8888888,                               ,II88Zl;.                  ;llZZZZZ888888I888888,                             ,II888Zl;.                .;;;;;lllZZZ888888I8888b                            ,II8888Z;;                 `;;;;;\'\'llZZ8888888I8888,                           II88888Z;\'                        .;lZZZ8888888I888b                           II88888Z; _,aaa,      .,aaaaa,__.l;llZZZ88888888I888                           II88888IZZZZZZZZZ,  .ZZZZZZZZZZZZZZ;llZZ88888888I888,                          II88888IZZ<\'(@@>Z|  |ZZZ<\'(@@>ZZZZ;;llZZ888888888I88I                         ,II88888;   `\"\"\" ;|  |ZZ; `\"\"\"     ;;llZ8888888888I888                         II888888l            `;;          .;llZZ8888888888I888,                       ,II888888Z;           ;;;        .;;llZZZ8888888888I888I                       III888888Zl;    ..,   `;;       ,;;lllZZZ88888888888I888                       II88888888Z;;...;(_    _)      ,;;;llZZZZ88888888888I888,                      II88888888Zl;;;;;\' `--\'Z;.   .,;;;;llZZZZ88888888888I888b                      ]I888888888Z;;;;\'   \";llllll;..;;;lllZZZZ88888888888I8888,                     II888888888Zl.;;\"Y88bd888P\";;,..;lllZZZZZ88888888888I8888I                     II8888888888Zl;.; `\"PPP\";;;,..;lllZZZZZZZ88888888888I88888                     II888888888888Zl;;. `;;;l;;;;lllZZZZZZZZW88888888888I88888      ..." /* TRUNCATED STRING LITERAL */
+        );
+  return;
+}
+
+void gdbme(void){
+char *answer = "gdb es la hostia";
+  if (TRUE) {
+    puts("try again");
+  }
+  else {
+    printf("%s",answer);
+  }
+  return;
+}
+
+void quine(void){
+  int gccReturnValue;
+  uint diff;  
+  char * answer = "abalastro";
+  char * errorMessage = "quine invalido";
+
+  gccReturnValue = system("gcc quine.c -o quine");
+  if (gccReturnValue == 0) {
+    printf("%s",errorMessage);
+    diff = system("./quine | diff - quine.c");
+    if (diff == 0) {
+      printf("%s",answer);
+    }
+    else {
+      printf("diff returned: %lu\n",(ulong)diff);
+    }
+  }
+  return;
+}
+
+void mixed_fds(void)
+{
+  FILE *__stream;
+  int rands;
+  int randChar;
+  int index;
+
+  char *answer = "indeterminado";
+
+  index = 0;
+  while (answer[index] != 0) {
+    rands = rand();
+    __stream = stderr;
+    if (rands % 100 < 0x4c) {
+      randChar = rand();
+      fputc((int)(char)((char)randChar + (char)(randChar / 0x1a) * -0x1a + 'a'),__stream);
+    }
+    else {
+      putchar(answer[index]);
+      index = index + 1;
+    }
+  }
   return;
 }
