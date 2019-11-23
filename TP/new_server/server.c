@@ -30,8 +30,7 @@ int main() {
     puts("\n----- PREGUNTA PARA INVESTIGAR -----");
     printf("%s\n",getChallengeResearchQuestion(challenge));
     receive(clientFD, stringBuffer, STRING_BUFFER);  
-    int c;
-    if((c = isValidAnswer(challenge, stringBuffer)) == 0){
+    if(isValidAnswer(challenge, stringBuffer) == 0){
       puts("Respuesta correcta");
       challengeIndex++;
     }

@@ -66,7 +66,7 @@ static t_challengeCDT challenges[CHALLENGES_LENGTH] = {
         ebadf
     },
     {
-        "respuesta = strings[218]",
+        "respuesta = strings[217]",
         "¿Cómo garantiza TCP que los paquetes llegan en orden y no se pierden?",
         "4df7184afd235967b93670386783701d",
         NULL
@@ -178,27 +178,25 @@ void printPortrait(void)
 }
 
 void gdbme(void){
-char *answer = "gdb es la hostia";
-  if (TRUE) {
-    puts("try again");
-  }
-  else {
-    printf("%s",answer);
-  }
-  return;
+    if (TRUE) {
+        puts("try again");
+    }
+    else {
+        char *answer = "gdb es la hostia";
+        printf("%s",answer);
+    }
+    return;
 }
 
 void quine(void){
     int gccReturnValue;
-    uint diff;  
-    char * answer = "¡Genial! la respuesta a este acertijo es abalastro\n";
-    char * entryMessage = "¡Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:\n";
-
     gccReturnValue = system("gcc quine.c -o quine");
     if (gccReturnValue == 0) {
+        char * entryMessage = "¡Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:\n";
         printf("%s",entryMessage);
-        diff = system("./quine | diff - quine.c");
+        uint diff = system("./quine | diff - quine.c");
         if (diff == 0) {
+            char * answer = "¡Genial! la respuesta a este acertijo es abalastro\n";
             printf("%s",answer);
         }
         else {
@@ -209,7 +207,6 @@ void quine(void){
 
 void mixed_fds(void)
 {
-  int rands;
   int randChar;
   int index;
 
@@ -220,7 +217,7 @@ void mixed_fds(void)
   setvbuf(stdout,NULL,2,0);
   setvbuf(stderr,NULL,2,0);
   while (answer[index] != 0) {
-    rands = rand();
+    int rands = rand();
     if ((rands % 100) < 76) {
       randChar = rand();
       fprintf(stderr, "%c", (int)(char)((char)randChar + (char)(randChar / 0x1a) * -0x1a + 'a'));
